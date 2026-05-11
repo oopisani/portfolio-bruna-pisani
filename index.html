@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruna Pisani | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <header class="glass-nav">
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-layout">
+        <div class="glass-container">
+            
+           <section id="sobre" class="content-block active">
+    <div class="profile-header">
+        <h1>Bruna Pisani</h1> <p class="subtitle">Backend Developer | Java & NLP Student</p>
+    </div>
+    <p>
+       Estudante de programação com foco em Java, Backend e pesquisas em Processamento de Linguagem Natural (NLP). Interessada em lógica de sistemas e hardware.
+    </p>
+    <button id="theme-toggle" class="glass-btn">Dark Mode</button>
+</section>
+
+           <section id="formacao" class="content-block">
+    <h2>Formação</h2>
+    
+    <div class="card-item">
+        <h3>Ciência da Computação</h3>
+        <p>Bacharelado em andamento (Início em 07/2024).</p>
+        <p>Foco em fundamentos de computação, algoritmos e desenvolvimento backend.</p>
+    </div>
+
+    <div class="card-item">
+        <h3>Ensino Médio</h3>
+        <p>Concluído em 2017 no Colégio Guroo.</p>
+    </div>
+
+    <div class="card-item">
+        <h3>Idiomas</h3>
+        <p><strong>Inglês:</strong> Nível Avançado (Proficiência em leitura técnica e conversação).</p>
+    </div>
+</section>
+
+            <section id="portfolio" class="content-block">
+                <h2>Projetos</h2>
+                <div class="project-links">
+                    <a href="https://github.com/oopisani/PIC_Analise_Sentimentos" target="_blank" class="glass-link">
+                        <strong>PIC: Análise de Sentimentos</strong>
+                        <span>Python & NLP Research</span>
+                    </a>
+                    <a href="https://github.com/oopisani/dio-lab-open-source" target="_blank" class="glass-link">
+                        <strong>Open Source Lab</strong>
+                        <span>Contribuições DIO & Práticas</span>
+                    </a>
+                </div>
+            </section>
+
+            <section id="contato" class="content-block">
+                <h2>Contato</h2>
+                <form id="contact-form">
+                    <input type="text" id="nome" placeholder="Seu Nome" class="input-field">
+                    <input type="email" id="email" placeholder="E-mail" class="input-field">
+                    <textarea id="mensagem" placeholder="Sua Mensagem" class="input-field" rows="3"></textarea>
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
