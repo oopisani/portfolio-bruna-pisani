@@ -1,0 +1,116 @@
+:root {
+    --glass: rgba(255, 255, 255, 0.15);
+    --border: rgba(255, 255, 255, 0.3);
+    --text: #ffffff;
+    --bg-image: url('https://images.unsplash.com/photo-1464802686167-b939a6910659?q=80&w=2070&auto=format&fit=crop');
+}
+
+* { box-sizing: border-box; scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--text);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--bg-image) no-repeat center center/cover;
+    z-index: -1;
+    filter: brightness(0.8);
+    transition: 0.5s ease;
+}
+.glass-nav {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 0;
+    z-index: 10;
+}
+
+.glass-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    margin: 0; padding: 0;
+}
+
+.glass-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.glass-nav a:hover { opacity: 1; text-shadow: 0 0 10px white; }
+
+.main-layout {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.glass-container {
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    width: 100%;
+    max-width: 500px; /* Largura similar ao estilo sharl.ee */
+    height: 70vh;
+    overflow-y: auto;
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.content-block { margin-bottom: 50px; }
+h1, h2 { margin-top: 0; font-weight: 300; letter-spacing: -1px; }
+
+.card-item, .glass-link {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 10px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.glass-link:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-2px); }
+
+.input-field {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+body.alt-theme .background-overlay { filter: grayscale(1) brightness(0.4); }
+body.alt-theme .glass-container { background: rgba(0, 0, 0, 0.4); }
